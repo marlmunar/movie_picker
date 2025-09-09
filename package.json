@@ -1,0 +1,24 @@
+{
+  "name": "movie-picker",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000m\u0000o\u0000v\u0000i\u0000e\u0000_\u0000p\u0000i\u0000c\u0000k\u0000e\u0000r\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlmunar/movie_picker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlmunar/movie_picker/issues"
+  },
+  "homepage": "https://github.com/marlmunar/movie_picker#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
