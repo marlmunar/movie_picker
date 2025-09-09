@@ -1,0 +1,24 @@
+{
+  "genre": {
+    "options": {
+      "action": ["action", "sci-fi action"],
+      "comedy": ["comedy", "funny"],
+      "horror": ["horror", "scary"]
+    }
+  },
+  "audience": {
+    "options": {
+      "kids": ["kids", "children", "family", "kid-friendly"],
+      "adults": ["adults", "grown-ups"]
+    }
+  },
+  "actor": {
+    "options": {
+      "tom cruise": ["Tom Cruise"],
+      "leonardo dicaprio": ["Leonardo DiCaprio"]
+    }
+  },
+  "year": {
+    "regex": "/\b(19|20)d{2}\b|\b(19|20)d{2}s\b|'d{2}s/"
+  }
+}

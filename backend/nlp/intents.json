@@ -1,0 +1,11 @@
+[
+  {
+    "name": "discover.movies",
+    "examples": [
+      "Show me %genre% movies from %year%",
+      "Find %genre% films for %audience%",
+      "List %genre% movies starring %actor%",
+      "Discover %genre% movies"
+    ]
+  }
+]

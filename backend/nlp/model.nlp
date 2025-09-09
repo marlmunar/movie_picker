@@ -1,0 +1,374 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "%genre%,%year%,from,me,movi,show": {
+            "intent": "discover.movies",
+            "domain": "default"
+          },
+          "%audience%,%genre%,film,find,for": {
+            "intent": "discover.movies",
+            "domain": "default"
+          },
+          "%actor%,%genre%,list,movi,star": {
+            "intent": "discover.movies",
+            "domain": "default"
+          },
+          "%genre%,discov,movi": {
+            "intent": "discover.movies",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "discover.movies": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Show me %genre% movies from %year%",
+            "intent": "discover.movies"
+          },
+          {
+            "domain": "default",
+            "utterance": "Find %genre% films for %audience%",
+            "intent": "discover.movies"
+          },
+          {
+            "domain": "default",
+            "utterance": "List %genre% movies starring %actor%",
+            "intent": "discover.movies"
+          },
+          {
+            "domain": "default",
+            "utterance": "Discover %genre% movies",
+            "intent": "discover.movies"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "show": 1,
+              "me": 1,
+              "%genre%": 1,
+              "movi": 1,
+              "from": 1,
+              "%year%": 1,
+              "find": 1,
+              "film": 1,
+              "for": 1,
+              "%audience%": 1,
+              "list": 1,
+              "star": 1,
+              "%actor%": 1,
+              "discov": 1
+            },
+            "intents": {
+              "discover.movies": 1
+            },
+            "intentFeatures": {
+              "discover.movies": {
+                "show": 1,
+                "me": 1,
+                "%genre%": 1,
+                "movi": 1,
+                "from": 1,
+                "%year%": 1,
+                "find": 1,
+                "film": 1,
+                "for": 1,
+                "%audience%": 1,
+                "list": 1,
+                "star": 1,
+                "%actor%": 1,
+                "discov": 1
+              }
+            },
+            "featuresToIntent": {
+              "show": [
+                "discover.movies"
+              ],
+              "me": [
+                "discover.movies"
+              ],
+              "%genre%": [
+                "discover.movies"
+              ],
+              "movi": [
+                "discover.movies"
+              ],
+              "from": [
+                "discover.movies"
+              ],
+              "%year%": [
+                "discover.movies"
+              ],
+              "find": [
+                "discover.movies"
+              ],
+              "film": [
+                "discover.movies"
+              ],
+              "for": [
+                "discover.movies"
+              ],
+              "%audience%": [
+                "discover.movies"
+              ],
+              "list": [
+                "discover.movies"
+              ],
+              "star": [
+                "discover.movies"
+              ],
+              "%actor%": [
+                "discover.movies"
+              ],
+              "discov": [
+                "discover.movies"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "show",
+                "me",
+                "%genre%",
+                "movi",
+                "from",
+                "%year%",
+                "find",
+                "film",
+                "for",
+                "%audience%",
+                "list",
+                "star",
+                "%actor%",
+                "discov"
+              ],
+              "intents": [
+                "discover.movies"
+              ],
+              "perceptrons": [
+                [
+                  0.6252017617225647,
+                  0.6252017617225647,
+                  5.354490756988525,
+                  3.7892212867736816,
+                  0.6252017617225647,
+                  0.6252017617225647,
+                  1.5664119720458984,
+                  1.5664119720458984,
+                  1.5664119720458984,
+                  1.5664119720458984,
+                  0.8421369194984436,
+                  0.8421369194984436,
+                  0.8421369194984436,
+                  2.3227999210357666,
+                  2.680085445156553
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Show me %genre% movies from %year%"
+      ],
+      [
+        "en",
+        "Find %genre% films for %audience%"
+      ],
+      [
+        "en",
+        "List %genre% movies starring %actor%"
+      ],
+      [
+        "en",
+        "Discover %genre% movies"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {
+      "en": {
+        "genre": {
+          "name": "genre",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "action",
+              "texts": [
+                "action",
+                "sci-fi action"
+              ]
+            },
+            {
+              "option": "comedy",
+              "texts": [
+                "comedy",
+                "funny"
+              ]
+            },
+            {
+              "option": "horror",
+              "texts": [
+                "horror",
+                "scary"
+              ]
+            }
+          ]
+        },
+        "audience": {
+          "name": "audience",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "kids",
+              "texts": [
+                "kids",
+                "children",
+                "family",
+                "kid-friendly"
+              ]
+            },
+            {
+              "option": "adults",
+              "texts": [
+                "adults",
+                "grown-ups"
+              ]
+            }
+          ]
+        },
+        "actor": {
+          "name": "actor",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "tom cruise",
+              "texts": [
+                "Tom Cruise"
+              ]
+            },
+            {
+              "option": "leonardo dicaprio",
+              "texts": [
+                "Leonardo DiCaprio"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "name": "year",
+          "type": "regex",
+          "rules": [
+            "/\\/\b(19|20)d{2}\b|\b(19|20)d{2}s\b|'d{2}s\\//g"
+          ]
+        }
+      }
+    }
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {
+    "discover.movies": {
+      "genre": {
+        "intent": "discover.movies",
+        "entity": "genre",
+        "mandatory": false,
+        "locales": {}
+      },
+      "year": {
+        "intent": "discover.movies",
+        "entity": "year",
+        "mandatory": false,
+        "locales": {}
+      },
+      "audience": {
+        "intent": "discover.movies",
+        "entity": "audience",
+        "mandatory": false,
+        "locales": {}
+      },
+      "actor": {
+        "intent": "discover.movies",
+        "entity": "actor",
+        "mandatory": false,
+        "locales": {}
+      }
+    }
+  }
+}
